@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Life Expectancy Predictor</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
     <h1>Life Expectancy Predictor</h1>
@@ -25,61 +26,79 @@
         </select><br>
 
         <label for="adult_mortality">Adult Mortality:</label><br>
-        <input type="number" id="adult_mortality" name="adult_mortality"><br>
+        <input type="range" id="adult_mortality" name="adult_mortality" min="0" max="1" step="0.01" oninput="adultMortalityValue.value = adult_mortality.value">
+        <input type="number" id="adultMortalityValue" name="adultMortalityValue" min="0" max="1" step="0.01" oninput="adult_mortality.value = adultMortalityValue.value"><br>
 
         <label for="infant_deaths">Infant Deaths:</label><br>
-        <input type="number" id="infant_deaths" name="infant_deaths"><br>
+        <input type="range" id="infant_deaths" name="infant_deaths" min="0" max="1" step="0.01" oninput="infantDeathsValue.value = infant_deaths.value">
+        <input type="number" id="infantDeathsValue" name="infantDeathsValue" min="0" max="1" step="0.01" oninput="infant_deaths.value = infantDeathsValue.value"><br>
 
         <label for="alcohol">Alcohol:</label><br>
-        <input type="number" id="alcohol" name="alcohol"><br>
+        <input type="range" id="alcohol" name="alcohol" min="0" max="1" step="0.01" oninput="alcoholValue.value = alcohol.value">
+        <input type="number" id="alcoholValue" name="alcoholValue" min="0" max="1" step="0.01" oninput="alcohol.value = alcoholValue.value"><br>
 
         <label for="percentage_expenditure">Percentage Expenditure:</label><br>
-        <input type="number" id="percentage_expenditure" name="percentage_expenditure"><br>
+        <input type="range" id="percentage_expenditure" name="percentage_expenditure" min="0" max="1" step="0.01" oninput="percentageExpenditureValue.value = percentage_expenditure.value">
+        <input type="number" id="percentageExpenditureValue" name="percentageExpenditureValue" min="0" max="1" step="0.01" oninput="percentage_expenditure.value = percentageExpenditureValue.value"><br>
 
         <label for="hepatitis_b">Hepatitis B:</label><br>
-        <input type="number" id="hepatitis_b" name="hepatitis_b"><br>
+        <input type="range" id="hepatitis_b" name="hepatitis_b" min="0" max="1" step="0.01" oninput="hepatitisBValue.value = hepatitis_b.value">
+        <input type="number" id="hepatitisBValue" name="hepatitisBValue" min="0" max="1" step="0.01" oninput="hepatitis_b.value = hepatitisBValue.value"><br>
 
         <label for="measles">Measles:</label><br>
-        <input type="number" id="measles" name="measles"><br>
+        <input type="range" id="measles" name="measles" min="0" max="1" step="0.01" oninput="measlesValue.value = measles.value">
+        <input type="number" id="measlesValue" name="measlesValue" min="0" max="1" step="0.01" oninput="measles.value = measlesValue.value"><br>
 
         <label for="bmi">BMI:</label><br>
-        <input type="number" id="bmi" name="bmi"><br>
+        <input type="range" id="bmi" name="bmi" min="0" max="1" step="0.01" oninput="bmiValue.value = bmi.value">
+        <input type="number" id="bmiValue" name="bmiValue" min="0" max="1" step="0.01" oninput="bmi.value = bmiValue.value"><br>
 
         <label for="under_five_deaths">Under-Five Deaths:</label><br>
-        <input type="number" id="under_five_deaths" name="under_five_deaths"><br>
+        <input type="range" id="under_five_deaths" name="under_five_deaths" min="0" max="1" step="0.01" oninput="underFiveDeathsValue.value = under_five_deaths.value">
+        <input type="number" id="underFiveDeathsValue" name="underFiveDeathsValue" min="0" max="1" step="0.01" oninput="under_five_deaths.value = underFiveDeathsValue.value"><br>
 
         <label for="polio">Polio:</label><br>
-        <input type="number" id="polio" name="polio"><br>
+        <input type="range" id="polio" name="polio" min="0" max="1" step="0.01" oninput="polioValue.value = polio.value">
+        <input type="number" id="polioValue" name="polioValue" min="0" max="1" step="0.01" oninput="polio.value = polioValue.value"><br>
 
         <label for="total_expenditure">Total Expenditure:</label><br>
-        <input type="number" id="total_expenditure" name="total_expenditure"><br>
+        <input type="range" id="total_expenditure" name="total_expenditure" min="0" max="1" step="0.01" oninput="totalExpenditureValue.value = total_expenditure.value">
+        <input type="number" id="totalExpenditureValue" name="totalExpenditureValue" min="0" max="1" step="0.01" oninput="total_expenditure.value = totalExpenditureValue.value"><br>
 
         <label for="diphtheria">Diphtheria:</label><br>
-        <input type="number" id="diphtheria" name="diphtheria"><br>
+        <input type="range" id="diphtheria" name="diphtheria" min="0" max="1" step="0.01" oninput="diphtheriaValue.value = diphtheria.value">
+        <input type="number" id="diphtheriaValue" name="diphtheriaValue" min="0" max="1" step="0.01" oninput="diphtheria.value = diphtheriaValue.value"><br>
 
         <label for="hiv_aids">HIV/AIDS:</label><br>
-        <input type="number" id="hiv_aids" name="hiv_aids"><br>
+        <input type="range" id="hiv_aids" name="hiv_aids" min="0" max="1" step="0.01" oninput="hivAidsValue.value = hiv_aids.value">
+        <input type="number" id="hivAidsValue" name="hivAidsValue" min="0" max="1" step="0.01" oninput="hiv_aids.value = hivAidsValue.value"><br>
 
         <label for="gdp">GDP:</label><br>
-        <input type="number" id="gdp" name="gdp"><br>
+        <input type="range" id="gdp" name="gdp" min="0" max="1" step="0.01" oninput="gdpValue.value = gdp.value">
+        <input type="number" id="gdpValue" name="gdpValue" min="0" max="1" step="0.01" oninput="gdp.value = gdpValue.value"><br>
 
         <label for="population">Population:</label><br>
-        <input type="number" id="population" name="population"><br>
+        <input type="range" id="population" name="population" min="0" max="1" step="0.01" oninput="populationValue.value = population.value">
+        <input type="number" id="populationValue" name="populationValue" min="0" max="1" step="0.01" oninput="population.value = populationValue.value"><br>
 
         <label for="thinness_1_19_years">Thinness 1-19 Years:</label><br>
-        <input type="number" id="thinness_1_19_years" name="thinness_1_19_years"><br>
+        <input type="range" id="thinness_1_19_years" name="thinness_1_19_years" min="0" max="1" step="0.01" oninput="thinness119YearsValue.value = thinness_1_19_years.value">
+        <input type="number" id="thinness119YearsValue" name="thinness119YearsValue" min="0" max="1" step="0.01" oninput="thinness_1_19_years.value = thinness119YearsValue.value"><br>
 
         <label for="thinness_5_9_years">Thinness 5-9 Years:</label><br>
-        <input type="number" id="thinness_5_9_years" name="thinness_5_9_years"><br>
+        <input type="range" id="thinness_5_9_years" name="thinness_5_9_years" min="0" max="1" step="0.01" oninput="thinness59YearsValue.value = thinness_5_9_years.value">
+        <input type="number" id="thinness59YearsValue" name="thinness59YearsValue" min="0" max="1" step="0.01" oninput="thinness_5_9_years.value = thinness59YearsValue.value"><br>
 
         <label for="income_composition_of_resources">Income Composition of Resources:</label><br>
-        <input type="number" id="income_composition_of_resources" name="income_composition_of_resources"><br>
+        <input type="range" id="income_composition_of_resources" name="income_composition_of_resources" min="0" max="1" step="0.01" oninput="incomeCompositionOfResourcesValue.value = income_composition_of_resources.value">
+        <input type="number" id="incomeCompositionOfResourcesValue" name="incomeCompositionOfResourcesValue" min="0" max="1" step="0.01" oninput="income_composition_of_resources.value = incomeCompositionOfResourcesValue.value"><br>
 
         <label for="schooling">Schooling:</label><br>
-        <input type="number" id="schooling" name="schooling"><br>
+        <input type="range" id="schooling" name="schooling" min="0" max="1" step="0.01" oninput="schoolingValue.value = schooling.value">
+        <input type="number" id="schoolingValue" name="schoolingValue" min="0" max="1" step="0.01" oninput="schooling.value = schoolingValue.value"><br>
 
         <input type="submit" value="Submit">
     </form>
     <p id="prediction"></p>
-</body>
+    </body>
 </html>
