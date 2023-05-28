@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life Expectancy Predictor</title>
+</head>
+<body>
+    <h1>Life Expectancy Predictor</h1>
+
+    <form action="/predict" method="post">
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+        <!-- Für jedes Land in der Liste, füge eine Option zum Dropdown-Menü hinzu -->
+        {% for country in country_list %}
+          <option value="{{country}}">{{country}}</option>
+        {% endfor %}
+        </select><br>
+
+        <label for="year">Year:</label><br>
+        <input type="number" id="year" name="year"><br>
+
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+          <option value="Developing">Developing</option>
+          <option value="Developed">Developed</option>
+        </select><br>
+
+        <label for="adult_mortality">Adult Mortality:</label><br>
+        <input type="number" id="adult_mortality" name="adult_mortality"><br>
+
+        <label for="infant_deaths">Infant Deaths:</label><br>
+        <input type="number" id="infant_deaths" name="infant_deaths"><br>
+
+        <label for="alcohol">Alcohol:</label><br>
+        <input type="number" id="alcohol" name="alcohol"><br>
+
+        <label for="percentage_expenditure">Percentage Expenditure:</label><br>
+        <input type="number" id="percentage_expenditure" name="percentage_expenditure"><br>
+
+        <label for="hepatitis_b">Hepatitis B:</label><br>
+        <input type="number" id="hepatitis_b" name="hepatitis_b"><br>
+
+        <label for="measles">Measles:</label><br>
+        <input type="number" id="measles" name="measles"><br>
+
+        <label for="bmi">BMI:</label><br>
+        <input type="number" id="bmi" name="bmi"><br>
+
+        <label for="under_five_deaths">Under-Five Deaths:</label><br>
+        <input type="number" id="under_five_deaths" name="under_five_deaths"><br>
+
+        <label for="polio">Polio:</label><br>
+        <input type="number" id="polio" name="polio"><br>
+
+        <label for="total_expenditure">Total Expenditure:</label><br>
+        <input type="number" id="total_expenditure" name="total_expenditure"><br>
+
+        <label for="diphtheria">Diphtheria:</label><br>
+        <input type="number" id="diphtheria" name="diphtheria"><br>
+
+        <label for="hiv_aids">HIV/AIDS:</label><br>
+        <input type="number" id="hiv_aids" name="hiv_aids"><br>
+
+        <label for="gdp">GDP:</label><br>
+        <input type="number" id="gdp" name="gdp"><br>
+
+        <label for="population">Population:</label><br>
+        <input type="number" id="population" name="population"><br>
+
+        <label for="thinness_1_19_years">Thinness 1-19 Years:</label><br>
+        <input type="number" id="thinness_1_19_years" name="thinness_1_19_years"><br>
+
+        <label for="thinness_5_9_years">Thinness 5-9 Years:</label><br>
+        <input type="number" id="thinness_5_9_years" name="thinness_5_9_years"><br>
+
+        <label for="income_composition_of_resources">Income Composition of Resources:</label><br>
+        <input type="number" id="income_composition_of_resources" name="income_composition_of_resources"><br>
+
+        <label for="schooling">Schooling:</label><br>
+        <input type="number" id="schooling" name="schooling"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p id="prediction"></p>
+</body>
+</html>

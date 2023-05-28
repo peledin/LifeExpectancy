@@ -4,6 +4,14 @@ from joblib import load
 # Modell laden
 rf = load("LifeExpectancy/Models/random_forest_model.joblib")
 
+import pandas as pd
+
+# Laden Sie Ihre Daten
+df = pd.read_csv("../data/life_expectancy_cleaned.csv")
+
+# Extrahieren Sie die eindeutigen Ländernamen und konvertieren Sie sie in eine Liste
+country_list = df["Country"].unique().tolist()
+
 
 def predict_life_expectancy(input_data):
     # Konvertieren Sie das Eingabedaten-Dict in einen DataFrame
