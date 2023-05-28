@@ -2,12 +2,10 @@ import pandas as pd
 from joblib import load
 
 # Modell laden
-rf = load("LifeExpectancy/Models/random_forest_model.joblib")
-
-import pandas as pd
+rf = load("Models/random_forest_model.joblib")
 
 # Laden Sie Ihre Daten
-df = pd.read_csv("../data/life_expectancy_cleaned.csv")
+df = pd.read_csv("data/life_expectancy_cleaned.csv")
 
 # Extrahieren Sie die eindeutigen Ländernamen und konvertieren Sie sie in eine Liste
 country_list = df["Country"].unique().tolist()
@@ -20,7 +18,7 @@ def predict_life_expectancy(input_data):
     df_encoded = pd.get_dummies(df)
 
     # Laden Sie die Liste der Features
-    all_features = load("LifeExpectancy/Models/feature_list.joblib")
+    all_features = load("Models/feature_list.joblib")
 
     # Fügen Sie fehlende Spalten hinzu und füllen Sie sie mit Nullen
     for col in all_features:
@@ -43,7 +41,7 @@ def predict_life_expectancy(input_data):
 # Testen der Funktion
 input_data = [
     {
-        "Country": "Afghanistan",
+        "Country": "Zimbabwe",
         "Year": 1999.0,
         "Status": "Developing",
         "Adult Mortality": 0.36288088642659283,
@@ -63,7 +61,7 @@ input_data = [
         " thinness  1-19 years": 0.6195652173913043,
         " thinness 5-9 years": 0.6035087719298246,
         "Income composition of resources": 0.1052742616033755,
-        "Schooling": 0.48792270531400966,
+        "Schooling": 0.88792270531400966,
     }
 ]
 
